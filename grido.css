@@ -1,0 +1,206 @@
+html, body{
+  height:100%; 
+  margin:0; 
+  padding:0;
+  font-family:'OpenSans',sans-serif,Tahoma,arial;
+  font-size:11px;
+}
+.grido_container{
+  border:solid 1px gray;
+  position:relative;
+  overflow-x:hidden;
+}
+.grido_container .header_container{
+    background-color:#2fb9d0;
+    border-bottom: solid 1px gray;   
+    position:relative;
+    height:26px;
+}
+.grido_container .header_container .globalToggle{
+    position: absolute;
+    z-index: 10;
+    font-size: 12px;
+    top: 5px;
+    left: 5px;
+}
+.grido_container .table_container{
+    overflow-y:auto;
+    overflow-x:hidden;
+    position:relative;
+}
+.grido_container .menu_container{
+    height:20px;
+    padding:3px 5px;
+    background-color:#75606f;
+}
+.grido_container .gosave{
+  background-color: orangered;
+}
+.grido_container .nosave{
+  background-color: greenyellow;
+}
+.grido_container .menu_save{
+    display:inline-block;
+    padding:2px 10px;
+    border:solid 1px gray;
+    cursor:pointer;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;     
+}
+.grido_container .menu_save:hover{
+    background-color: black;
+    color:orangered;
+}
+.grido {
+  border-collapse: collapse;
+}
+.grido td, .grido th{
+  border: solid 1px gray;
+  padding: 3px 0;
+  padding-left: 5px;
+  height:20px;
+  position:relative;
+}
+.grido tr.hovering:hover{
+  background-color: gainsboro;
+}
+.grido th{
+  border-top: none;
+  border-bottom: none;
+}
+.grido td{
+  border-top: none;
+}
+.grido th:first-child,.grido td:first-child{
+  border-left-color: transparent;
+}
+
+.grido td .menu{
+  position:absolute;
+  top:2px;
+  right:2px;
+  display:none;
+}
+.grido td:hover .menu{
+  display:inline;
+}
+.grido td .menu > span{
+  transition: .35s all;
+  -webkit-transition: .35s all;
+  -moz-transition: .35s all;
+  -ms-transition: .35s all;
+  -o-transition: .35s all;   
+  cursor: pointer;
+  font-size: 9px;
+  color:gray;
+}
+.grido td .menu > span > span.del_node:hover{
+  color:red;
+}
+.grido td .menu > span > span.add_node:hover{
+  color:green;
+}
+.grido td > span.cell_data{
+  padding: 5px;
+  position:absolute;
+  min-height:15px;
+  top:0px;
+}
+.grido td > span > input[type=text], .grido td > span.cell_data > input{
+  background-color: transparent;
+  border:none;
+  padding:0px;
+  width: 100%;
+  height:100%;
+  box-shadow: none;
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;  
+}
+.grido td > span.cell_data > select{
+  background-color: transparent;
+  border:none;
+  padding:0px;
+  width: 100%;
+  margin-left:-4px;
+  margin-top:-1px;
+  box-shadow: none;
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;    
+}
+.grido .tree_square{
+  display:inline-block;
+  width:15px;
+  cursor:pointer;
+  color:#2FB9D0;
+  font-size: 12px;
+  text-align: center;
+}
+.grido .tree{
+  line-height: 1.7;
+}
+.grido_left_menu_button{
+  position: absolute;
+  top:3px;
+  right: 10px;
+  font-size: 20px;
+}
+.grido_left_menu{
+  width:200px;
+  position: absolute;
+  padding:2px 10px;
+  top:26px;
+  z-index: 10;
+  background-color: #999999;
+  overflow-y:scroll;
+  transition: .5s right;
+  -webkit-transition: .5s right;
+  -moz-transition: .5s right;
+  -ms-transition: .5s right;
+  -o-transition: .5s right; 
+}
+
+.user_list, .user_list_inline{
+  padding:0px;
+  margin:0px;
+}
+.user_list_inline{
+  display:block;
+  height: 20px;
+  width:340px;
+  overflow-y:hidden;
+}
+.user_list li{
+  list-style-type: none;
+  cursor:all-scroll;
+  background-color: #999999;
+  padding:5px;
+}
+
+.user_list_inline li{
+  list-style-type: none;
+  cursor:all-scroll;
+  background-color: #999999;
+  display:inline-block;
+  padding:2px 5px;
+  border:solid 1px white;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5dpx;   
+}
+
+.js-remove{
+  color:gray;
+  cursor:pointer;
+}
+.js-remove:hover{
+  color:red;
+}
