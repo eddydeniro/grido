@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play Ground</title>
+	<link type="text/css" rel="stylesheet" media="all" href="fonts/OpenSans/OpenSans.css" />
+	<link type="text/css" rel="stylesheet" href="fonts/icomoon/icomoon.css" />
+	<link rel="stylesheet" rel="stylesheet" href="../grido.css">
+
+</head>
+<body>
+<br>
+<div id="grido" ></div>
+<script src="../grido.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function(){
+	var options={
+		"container":"grido",
+		"height":window.innerHeight-50,
+		"parentField":"struct_id_to",
+		"childField":"struct_id",
+		"fields":[
+			{"name":"struct_id"},
+			{"name":"struct_id_to"},
+			{"name":"struct_name"},
+			{"name":"struct_bs_id"},
+			{"name":"subs_num"},
+			{"name":"level"}
+			],
+		"columns":[
+			{"id":"struct_name","width":350,"header":"Name","textAlign":"center"},
+			{"id":"struct_id","hidden":true},
+			{"id":"struct_id_to","hidden":true},
+			{"id":"struct_bs_id","width":150,"header":"Level","textAlign":"center","editor":{"type":"select","options":{"1":"Company","2":"Department","3":"Division","4":"Section","5":"Subsection","6":"Unit","7":"Subunit"}}},
+			],
+		"dataset":[
+			{"struct_id":"14","struct_id_to":"12","struct_name":"Pharmaceutical Product","struct_bs_id":"2","subs_num":3,"level":0},
+			{"struct_id":"24","struct_id_to":"14","struct_name":"Manufacturing","struct_bs_id":"3","subs_num":4,"level":1},
+			{"struct_id":"2","struct_id_to":"24","struct_name":"Quality Control","struct_bs_id":"5","subs_num":3,"level":2},
+			{"struct_id":"5","struct_id_to":"2","struct_name":"Packaging Lab","struct_bs_id":"6","subs_num":0,"level":3},
+			{"struct_id":"6","struct_id_to":"2","struct_name":"Chemistry Lab","struct_bs_id":"6","subs_num":0,"level":3},
+			{"struct_id":"7","struct_id_to":"2","struct_name":"Biology Lab","struct_bs_id":"6","subs_num":0,"level":3},
+			{"struct_id":"25","struct_id_to":"24","struct_name":"PPIC","struct_bs_id":"4","subs_num":2,"level":2},
+			{"struct_id":"26","struct_id_to":"25","struct_name":"Product Planning","struct_bs_id":"5","subs_num":0,"level":3},
+			{"struct_id":"27","struct_id_to":"25","struct_name":"Warehouse","struct_bs_id":"5","subs_num":0,"level":3},
+			{"struct_id":"28","struct_id_to":"24","struct_name":"Maintenance","struct_bs_id":"5","subs_num":0,"level":2},
+			{"struct_id":"31","struct_id_to":"24","struct_name":"Production","struct_bs_id":"4","subs_num":3,"level":2},
+			{"struct_id":"15","struct_id_to":"31","struct_name":"Powder","struct_bs_id":"5","subs_num":0,"level":3},
+			{"struct_id":"21","struct_id_to":"31","struct_name":"Liquid","struct_bs_id":"5","subs_num":2,"level":3},
+			{"struct_id":"33","struct_id_to":"21","struct_name":"Sterile","struct_bs_id":"6","subs_num":0,"level":4},
+			{"struct_id":"34","struct_id_to":"21","struct_name":"Non Sterile","struct_bs_id":"6","subs_num":0,"level":4},
+			{"struct_id":"30","struct_id_to":"14","struct_name":"Purchasing","struct_bs_id":"5","subs_num":0,"level":1}],
+		"firstParentId":"12",
+	};	
+	new Grido(options);
+});
+</script>
+</body>
+</html>
